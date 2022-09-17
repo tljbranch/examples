@@ -1,3 +1,5 @@
+org: tljbranch
+app: aws-node-stripe-integration
 # Welcome to Serverless!
 #
 # This file is the main config file for your service.
@@ -20,8 +22,8 @@ service: aws-node-stripe-integration
 provider:
   name: aws
   runtime: nodejs12.x
-  stage: test
-  region: us-east-1
+  stage: dev
+  region: ap-southeast-1
 
 # you can add statements to the Lambda function's IAM Role here
 #  iam:
