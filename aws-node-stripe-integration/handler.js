@@ -51,8 +51,8 @@ module.exports.incoming = async (event, context, callback) => {
 					let newCredit = (Number(currrentCredit) + amountTotal);
 					await updateCompaniesTable(customerEmail, newCredit);
 					console.log('done update company');
-					let count = await getPaymentsCount() + 1;
-					await writePaymentsTable(count.toString(), amountTotal, amountTotal, customerEmail, clientReferenceId);
+					//let count = await getPaymentsCount() + 1;
+					await writePaymentsTable(clientReferenceId, amountTotal, amountTotal, customerEmail, clientReferenceId);
 					break;
 				default:
 					console.log('***Wrong case', stripeEvent.type);
